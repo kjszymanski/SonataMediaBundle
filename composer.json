@@ -1,7 +1,7 @@
 {
     "name": "deusz/media-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony SonataMediaBundle without admin",
+    "description": "Symfony SonataMediaBundle without admin bundle requirement",
     "keywords": ["media", "sonata", "youtube", "dailymotion", "vimeo", "pdf", "file", "upload"],
     "homepage": "http://sonata-project.org/bundles/media",
     "license": "MIT",
