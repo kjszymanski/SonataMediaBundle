@@ -5,10 +5,6 @@
         http://symfony.com/schema/dic/services/constraint-mapping-1.0.xsd">
 
     <class name="Application\Sonata\MediaBundle\Entity\Media">
-        <constraint name="Sonata\AdminBundle\Validator\Constraints\InlineConstraint">
-            <option name="service">sonata.media.pool</option>
-            <option name="method">validate</option>
-        </constraint>
 
         <property name="name">
            <constraint name="NotNull" />
