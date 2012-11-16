@@ -16,9 +16,6 @@ use Sonata\MediaBundle\CDN\CDNInterface;
 use Sonata\MediaBundle\Generator\GeneratorInterface;
 use Sonata\MediaBundle\Thumbnail\ThumbnailInterface;
 
-use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Validator\ErrorElement;
-
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
@@ -69,27 +66,7 @@ class FileProvider extends BaseProvider
         return $this->getFilesystem()->get($this->getReferenceImage($media), true);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function buildEditForm(FormMapper $formMapper)
-    {
-        $formMapper->add('name');
-        $formMapper->add('enabled', null, array('required' => false));
-        $formMapper->add('authorName');
-        $formMapper->add('cdnIsFlushable');
-        $formMapper->add('description');
-        $formMapper->add('copyright');
-        $formMapper->add('binaryContent', 'file', array('required' => false));
-    }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function buildCreateForm(FormMapper $formMapper)
-    {
-        $formMapper->add('binaryContent', 'file');
-    }
 
     /**
      * {@inheritdoc}
@@ -331,7 +308,7 @@ class FileProvider extends BaseProvider
     /**
      * {@inheritdoc}
      */
-    public function validate(ErrorElement $errorElement, MediaInterface $media)
+    public function validate($errorElement, MediaInterface $media)
     {
         if (!$media->getBinaryContent() instanceof \SplFileInfo) {
             return;

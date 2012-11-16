@@ -11,10 +11,8 @@
 namespace Sonata\MediaBundle\Provider;
 
 use Sonata\MediaBundle\Model\MediaInterface;
-use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\MediaBundle\Resizer\ResizerInterface;
 use Gaufrette\Filesystem;
-use Sonata\AdminBundle\Validator\ErrorElement;
 use Symfony\Component\Form\FormBuilder;
 
 interface MediaProviderInterface
@@ -117,19 +115,6 @@ interface MediaProviderInterface
      */
     function postRemove(MediaInterface $media);
 
-    /**
-     * build the related create form
-     *
-     * @param \Sonata\AdminBundle\Form\FormMapper $formMapper
-     */
-    function buildCreateForm(FormMapper $formMapper);
-
-    /**
-     * build the related create form
-     *
-     * @param \Sonata\AdminBundle\Form\FormMapper $formMapper
-     */
-    function buildEditForm(FormMapper $formMapper);
 
     /**
      * @param MediaInterface $media
@@ -251,14 +236,6 @@ interface MediaProviderInterface
      * @return void
      */
     function transform(MediaInterface $media);
-
-    /**
-     * @param ErrorElement     $errorElement
-     * @param MediaInterface   $media
-     *
-     * @return void
-     */
-    function validate(ErrorElement $errorElement, MediaInterface $media);
 
     /**
      * @param FormBuilder $formBuilder
