@@ -20,7 +20,6 @@
         "symfony/symfony": ">=2.1,<2.3-dev",
         "sonata-project/easy-extends-bundle": "*",
         "sonata-project/doctrine-extensions": "*",
-        "sonata-project/block-bundle": "*",
         "knplabs/gaufrette": "*",
         "imagine/Imagine": "v0.3.0",
         "kriswallsmith/buzz": "0.7"
