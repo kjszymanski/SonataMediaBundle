@@ -45,7 +45,7 @@ class SonataMediaExtension extends Extension
         $loader->load('provider.xml');
         $loader->load('media.xml');
         $loader->load('twig.xml');
-        $loader->load('block.xml');
+        //$loader->load('block.xml');
         $loader->load('security.xml');
         $loader->load('extra.xml');
         $loader->load('form.xml');
